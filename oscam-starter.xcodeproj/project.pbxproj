@@ -36,7 +36,6 @@
 		CA6B46FD263B10B90065D479 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CA6B4704263B11030065D479 /* starter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = starter.cpp; sourceTree = "<group>"; };
 		CA6B4705263B11030065D479 /* starter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = starter.hpp; sourceTree = "<group>"; };
-		CAB2E3042689E47A006CDE50 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CAE40C09267E4BFB001A6826 /* config.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = config.cpp; sourceTree = "<group>"; };
 		CAE40C0A267E4BFB001A6826 /* config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = config.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +96,6 @@
 				CA4BE23A263C5D66001AEA7F /* watchdog.hpp */,
 				CAE40C09267E4BFB001A6826 /* config.cpp */,
 				CAE40C0A267E4BFB001A6826 /* config.hpp */,
-				CAB2E3042689E47A006CDE50 /* README.md */,
 			);
 			path = "oscam-starter";
 			sourceTree = "<group>";
