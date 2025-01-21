@@ -21,18 +21,23 @@
 int main(int argc, const char * argv[]) {
     signal(SIGALRM,(void (*)(int))kill_oscam);
     signal(SIGHUP,(void (*)(int))reload_oscam);
-    std::vector < const char * > arguments;
+    std::vector<const char *> arguments;
     for(int i = 1; i < argc; i++)
-        arguments.push_back( argv[i] );
-    
-    Watchdog watchdog(OScamPoint::parseFromConfig(arguments));
-    if(watchdog.start()) {
-        Starter starter;
-        const int e_code = starter.start(arguments);
-        watchdog.stop();
-        std::cout << "OScam exited with code: " << e_code << "\n";
-        return e_code;
-    } else {
-        return 256;
+        arguments.push_back(argv[i]);
+    try {
+        Watchdog watchdog(OScamPoint::parseFromConfig(arguments));
+        if(watchdog.start()) {
+            Starter starter;
+            const int e_code = starter.start(arguments);
+            watchdog.stop();
+            std::cout << "OScam exited with code: " << e_code << "\n";
+            return e_code;
+        } else {
+            std::cerr << "Failed to start watchdog!" << std::endl;
+            return 256;
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Fatal error: " << e.what() << std::endl;
+        return 1;
     }
 }
